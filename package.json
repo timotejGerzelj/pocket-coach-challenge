@@ -1,7 +1,7 @@
 {
-  "name": "startpack",
+  "name": "pocket-coach-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "I try to figure out how to do React",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
@@ -15,7 +15,7 @@
     "format": "npm run css:prettify && npm run js:prettify",
     "prod": "npm run prod:build && npm run prod:wds"
   },
-  "author": "",
+  "author": "Timotej Gerzelj",
   "license": "MIT",
   "dependencies": {
     "react": "^16.12.0",

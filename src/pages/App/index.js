@@ -9,12 +9,26 @@ for (var i=0; i< 10; i++) {
 
 
 const App = () => <Fragment>
+          <table>  
+          <thead>
+               <tr>
+                    <th>bids</th>
+                    <th>dates</th>
+                    <th>amounts</th>
+               </tr>
+          </thead> 
+          <tbody>
           {
                Object.keys(offers).map( offer => {
-                    console.log(offers[offer])
-                    return( <p>{offers[offer].date.toString()} {offers[offer].amount}  </p> )
+                    return( <tr key={offers[offer].bid} >
+                              <td>{offers[offer].bid}</td>
+                              <td>{offers[offer].date.toString()}</td>
+                              <td>{offers[offer].amount}</td>
+                         </tr>)
                }  )
           }
+          </tbody>
+          </table>
      </Fragment>
 
 export default App
