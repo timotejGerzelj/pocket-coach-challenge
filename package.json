@@ -6,14 +6,16 @@
   "scripts": {
     "start": "npm run dev",
     "dev:build": "npx rimraf public && npx cross-env process.env.NODE_ENV=development webpack --mode development --config webpack.dev.js",
-    "prod:build": "npx rimraf public && npx cross-env process.env.NODE_ENV=production webpack --mode production --config webpack.prod.js && npx rimraf public",
+    "prod:build": "npx rimraf public && npx cross-env process.env.NODE_ENV=production webpack --mode production --config webpack.prod.js",
     "dev:wds": "npx webpack-dev-server --open --port 3000 --content-base public --history-api-fallback --watch-content-base --config webpack.dev.js",
     "prod:wds": "npx webpack-dev-server --open --compress --port 3004 --content-base public --history-api-fallback --watch-content-base --config webpack.dev.js",
     "dev": "npm run dev:build && npm run dev:wds",
     "js:prettify": "npx prettier --parser=babylon --write \"src/**/*.{js,jsx}\"",
     "css:prettify": "npx prettier --parser=css --write \"src/**/*.css\"",
     "format": "npm run css:prettify && npm run js:prettify",
-    "prod": "npm run prod:build && npm run prod:wds"
+    "prod": "npm run prod:build && npm run prod:wds",
+    "branch:deploy": "now",
+    "prod:deploy": "now --prod"
   },
   "author": "Timotej Gerzelj",
   "license": "MIT",
